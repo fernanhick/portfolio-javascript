@@ -1,0 +1,258 @@
+/* theme stylilng */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+:root {
+    /* light theme */
+    --font-white: white;
+    --font-red: red;
+    --light-theme-primary-color: black;
+    --light-theme-secondary-color: rgb(23, 85, 136);
+    --light-theme-secondary-blue-color: rgb(102, 132, 156);
+    --light-theme-primary-background: rgb(255, 255, 255);
+    --light-theme-secondary-background: rgb(49, 49, 49);
+
+    --dark-theme-primary-color: white;
+    --dark-theme-secondary-color: rgb(214, 155, 241);
+}
+/* General Styling */
+
+li,
+ul,
+a {
+    font-style: none;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*  NAVBAR styling */
+.navbar ul li a {
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+.navbar ul li {
+    list-style-type: none;
+    text-align: center;
+}
+.navbar ul li :hover {
+    color: var(--light-theme-secondary-color);
+    transition: 0.4s;
+}
+.navbar ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    gap: 0.8rem;
+    text-transform: uppercase;
+}
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 3.5rem;
+    padding: 30px 10%;
+    position: fixed;
+    width: 100vw;
+    transition: 0.6s;
+}
+.scrolled {
+    background-color: white;
+    box-shadow: 0px 2px 15px 3px rgb(190, 190, 190);
+}
+.scrolled ul li a {
+    color: black;
+}
+.scrolled .logo {
+    color: var(--light-theme-secondary-color);
+}
+
+@media screen and (max-width: 800px) {
+    .navbar ul {
+        content-visibility: hidden;
+    }
+}
+
+/*  LOGO */
+.logo {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.logo::first-letter {
+    font-size: 2rem;
+    color: red;
+}
+/*  PROFILE PICTURE */
+
+#profile-pic {
+    width: 10rem;
+    border-radius: 50%;
+    border: 0.3rem solid white;
+}
+#name-dec {
+    color: red;
+    font-size: 2rem;
+}
+
+/* *********SOCIAL MEDIA *************** */
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 2rem;
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    gap: 1.1rem;
+}
+.social-media > a > svg {
+    fill: var(--font-white);
+}
+.social-media > a > svg:hover {
+    fill: var(--light-theme-secondary-blue-color);
+}
+
+/* *********TYPEWRITTER EFFECT *********** */
+#type-effect {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--font-white);
+    padding: 0;
+}
+.text1 {
+    animation: text_1;
+}
+.text2 {
+    animation: text_2;
+}
+.text3 {
+    animation: text_3;
+}
+
+.text1,
+.text2,
+.text3 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    animation-duration: 15s;
+    animation-timing-function: steps(15, end);
+    animation-iteration-count: infinite;
+}
+.text1::after,
+.text2::after,
+.text3::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+@keyframes text_1 {
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+    10%,
+    40% {
+        width: 12em;
+    }
+}
+@keyframes text_2 {
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+    60%,
+    90% {
+        width: 9.5em;
+    }
+}
+
+@keyframes caret {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* ********SOCIAL MEDIA EFFECT ********* */
+
+/* *************TYPEWRITTER EFFECT END********************* */
+
+/* Hero Section Styling */
+.hero-section {
+    margin: 0;
+    background-image: url(src/images/sky.jpg);
+    background-size: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-title {
+    font-size: 2rem;
+    margin: 0px;
+    color: var(--font-white);
+    text-align: center;
+}
+.hero-container > a > svg {
+    fill: var(--font-white);
+}
+
+.hero-container > a > svg:hover {
+    fill: var(--font-red);
+}
+.hero-container {
+    gap: 1rem;
+    padding-top: 20%;
+    padding-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* section-container styling */
+.section-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;
+}
+
+/* **********************ABOUT SECTION STYLING ****************** */
+.about-container-right {
+    align-items: center;
+    width: 15rem;
+    border: 0.1rem solid black;
+    padding: 1rem;
+}
+.about-container-left {
+    width: 40rem;
+}
+.about-container {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ***************** SHOWCASE SECTION STYLING ******************** */
