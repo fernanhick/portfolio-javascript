@@ -20,3 +20,13 @@ function scrollFunction() {
         nav.classList.remove("scrolled");
     }
 }
+
+const navButton = document.querySelector(".menu-button");
+navButton.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    let nav = document.getElementById("navbar");
+
+    nav.classList.toggle("nav_toggle");
+    console.log("toggle menu");
+}
