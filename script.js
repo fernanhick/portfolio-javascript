@@ -23,10 +23,9 @@ function scrollFunction() {
 
 const navButton = document.querySelector(".menu-button");
 navButton.addEventListener("click", toggleMenu);
+let nav = document.getElementById("navbar");
 
 function toggleMenu() {
-    let nav = document.getElementById("navbar");
-
     nav.classList.toggle("nav_toggle");
     console.log("toggle menu");
 }
