@@ -20,7 +20,9 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-button"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-button">
+                <i class="fa-solid fa-bars fa-lg"></i>
+            </div>
         </nav>
         <!--------------------------------- Navbar finish --------------------------------->
         <!------------------------------- Hero Section ------------------------------------------>
@@ -265,16 +267,41 @@
 
         <section id="contact" class="contact section-container">
             <div class="contact-container">
-                <p class="contact-p">
-                    I.T. Professional with technical experience in hardware and
-                    software support, and over 10 years of experience with face
-                    to face customer service (hospitality industry). I am a
-                    technology enthusiast, problem solver as well as quick
-                    action taker with a keen eye to details. Proficient in
-                    software and hardware installation as well as testing
-                    experience. Motivated team worker with the ability to
-                    perform under multiple deadlines.
-                </p>
+                <h1>Contact Form</h1>
+                <form
+                    target="_blank"
+                    action="https://formsubmit.co/fernanhick@gmail.com"
+                    method="POST"
+                >
+                    <div class="form-group">
+                        <div class="col-name">
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                placeholder="Full Name"
+                                required
+                            />
+                        </div>
+                        <div class="col-email">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Email Address"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <textarea
+                        placeholder="Your Message"
+                        class="form-text"
+                        name="message"
+                        rows="10"
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn-form">Submit Form</button>
+                </form>
             </div>
         </section>
     </body>
