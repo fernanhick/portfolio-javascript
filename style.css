@@ -364,10 +364,6 @@ html {
 .project-img > img {
     width: 100%;
 }
-.project-img {
-    /*     display: flex;
-    justify-content: space-around; */
-}
 
 .languages {
     text-align: center;

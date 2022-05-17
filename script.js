@@ -29,3 +29,14 @@ function toggleMenu() {
     nav.classList.toggle("nav_toggle");
     console.log("toggle menu");
 }
+
+//Toggle navbar when clicking any menu button
+linksList = document.querySelectorAll(".link-item");
+for (i = 0; i < linksList.length; i++) {
+    linksList[i].addEventListener("click", function () {
+        nav.classList.remove("nav_toggle");
+    });
+}
+document.querySelector(".logo").addEventListener("click", function () {
+    nav.classList.remove("nav_toggle");
+});
