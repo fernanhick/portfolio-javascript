@@ -309,10 +309,10 @@ html {
 /* ***************** SHOWCASE SECTION STYLING ******************** */
 .showcase-container > h1 {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.8em;
     height: 100%;
     color: rgb(255, 255, 255);
-    background: grey;
+    background: black;
 }
 .showcase {
     background-image: url(src/images/table.jpg);
@@ -379,72 +379,69 @@ html {
     text-align: center;
     padding: 0.2rem;
 }
-
-/* *****************EXPERIENCE STYLING ********************** */
-
-.experience-box {
-    width: 25rem;
-    height: 25rem;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 0;
-    padding: 1rem;
-    transition: ease-in-out all 0.4s;
-}
-.experience-box::before {
-    width: 10rem;
-    height: 30rem;
-}
-.experience-box::after {
-    height: 10rem;
-    width: 30rem;
-}
-.experience-box::after,
-.experience-box::before {
-    position: absolute;
-    background: rgb(255, 255, 255);
-    z-index: -1;
-    transition: 0.6s;
-    content: '';
-}
-
-.experience-box:hover::after {
-    transform: rotate(45deg);
-}
-.experience-box:hover::after {
-    transform: rotate(45deg);
-}
-.experience-box:hover::before {
-    transform: rotate(45deg);
-}
-.experience-box:hover {
-    border: 3px solid black;
-}
-
-.experience {
-    display: flex;
-    align-items: center;
-}
-.experience-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 80vh;
-}
-
-/* ***********BAR ANIMATION *********** */
-.exp-details {
-    min-width: 100%;
-    padding: 2rem;
-    border: 1px solid black;
+.project-code,
+.project-page {
+    color: white;
+    background: linear-gradient(90deg, black 30%, purple);
+    padding: 1px 5px;
     border-radius: 5px;
 }
+.project-code a,
+.project-page a {
+    color: white;
+}
+/* *****************EXPERIENCE STYLING ********************** */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 50vh;
+    gap: 1em;
+}
 
+.skills-box-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    gap: 2em;
+    padding: 0.5em;
+    box-shadow: 0px 0px 30px rgba(204, 204, 204, 0.8);
+}
+.experience-container-title {
+    height: 5em;
+    background-image: url('./src/images/tech-icons/tech.png');
+    align-self: flex-start;
+    width: 100%;
+    background-size: 20em;
+    background-color: black;
+    background-blend-mode: luminosity;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgba(204, 204, 204, 0.8);
+}
+.skills-box h5 {
+    margin: 0;
+}
+.skills-box img {
+    height: 6em;
+    width: 6em;
+}
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.experience-container-title h1 {
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    background: black;
+}
 /* *********** CONTACT SECTION*********** */
 .contact-container {
     background-color: var(--font-white);
