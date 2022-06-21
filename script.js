@@ -7,8 +7,31 @@ function printToConsole() {
 
 window.onscroll = function () {
     scrollFunction()
+    getSelection()
 }
 
+const sections = document.querySelectorAll('section[id]')
+console.log(sections)
+function getSelection() {
+    let scrollY = window.scrollY
+    console.log(scrollY)
+
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 40
+        const sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document
+                .querySelector('.navbar a[href*=' + sectionId + ']')
+                .classList.add('active')
+        } else {
+            document
+                .querySelector('.navbar a[href*=' + sectionId + ']')
+                .classList.remove('active')
+        }
+    })
+}
 function scrollFunction() {
     let nav = document.getElementById('navbar')
     if (
@@ -41,4 +64,3 @@ for (i = 0; i < linksList.length; i++) {
 document.querySelector('.logo').addEventListener('click', function () {
     nav.classList.remove('nav_toggle')
 })
-data.title
