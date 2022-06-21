@@ -1,17 +1,9 @@
-const navLogo = document.querySelector('.logo')
-navLogo.addEventListener('click', printToConsole)
-
-function printToConsole() {
-    console.log()
-}
-
 window.onscroll = function () {
     scrollFunction()
     getSelection()
 }
 
 const sections = document.querySelectorAll('section[id]')
-console.log(sections)
 function getSelection() {
     let scrollY = window.scrollY
 
