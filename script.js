@@ -14,7 +14,6 @@ const sections = document.querySelectorAll('section[id]')
 console.log(sections)
 function getSelection() {
     let scrollY = window.scrollY
-    console.log(scrollY)
 
     sections.forEach((current) => {
         const sectionHeight = current.offsetHeight
@@ -50,7 +49,6 @@ let nav = document.getElementById('navbar')
 
 function toggleMenu() {
     nav.classList.toggle('nav_toggle')
-    console.log('toggle menu')
 }
 
 //Toggle navbar when clicking any menu button
