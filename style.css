@@ -45,7 +45,7 @@ html {
     color: white;
     font-weight: 600;
     padding: 0px 0.3em;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .navbar ul li {
     list-style-type: none;
@@ -85,7 +85,7 @@ html {
 }
 
 .active {
-    background-color: rgba(24, 25, 121, 0.8);
+    background-color: rgba(24, 25, 121, 0.6);
 }
 .link-item .active {
     color: white;
@@ -308,10 +308,15 @@ html {
 /* **********************ABOUT SECTION STYLING ****************** */
 .about-container-right {
     align-items: center;
-    width: 15rem;
+    max-width: 25rem;
     color: var(--font-white);
     background-color: rgb(0, 0, 82);
     padding: 1rem;
+    min-height: 20em;
+}
+.about-container-right > p {
+    position: sticky;
+    top: 10em;
 }
 .about-container-right > h1 {
     font-size: 1.3em;
@@ -324,7 +329,7 @@ html {
     font-size: 1em;
 }
 .about-container-left {
-    width: 40rem;
+    max-width: 40em;
 }
 .about-container {
     border-radius: 10px;
@@ -333,7 +338,7 @@ html {
     flex-wrap: wrap;
     display: flex;
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 25px 5px rgb(212, 212, 212);
 }
@@ -423,11 +428,12 @@ html {
 /* *****************EXPERIENCE STYLING ********************** */
 .experience-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
-    min-height: 50vh;
+    min-height: 80%;
     gap: 1em;
+    isolation: isolate;
 }
 
 .skills-box-container {
@@ -438,8 +444,13 @@ html {
     gap: 2em;
     padding: 0.5em;
     box-shadow: 0px 0px 30px rgba(204, 204, 204, 0.8);
+    z-index: 1;
+    background: white;
 }
 .experience-container-title {
+    z-index: -4;
+    position: sticky;
+    top: 5.5em;
     height: 5em;
     background-image: url('./src/images/tech-icons/tech.png');
     align-self: flex-start;
@@ -471,6 +482,38 @@ html {
     font-weight: 800;
     color: white;
     background: black;
+}
+#experience {
+    display: grid;
+    gap: 2em;
+}
+
+.experience-description {
+    min-height: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+}
+
+.main-description,
+.secondary-description {
+    border-radius: 5px;
+    padding: 0.5em;
+    box-shadow: 0px 0px 30px rgba(204, 204, 204, 0.8);
+    top: 20em;
+    position: sticky;
+}
+.secondary-description {
+    top: 5em;
+}
+
+@media screen and (min-width: 600px) {
+    #experience {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+    }
 }
 /* *********** CONTACT SECTION*********** */
 .contact-container {
