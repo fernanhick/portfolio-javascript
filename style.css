@@ -264,7 +264,7 @@ html {
 /* Hero Section Styling */
 .hero-section {
     margin: 0;
-    background-image: url(src/images/sky1.jpg);
+    background-image: url(src/images/sky1.webp);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -347,7 +347,7 @@ html {
     background: black;
 }
 .showcase {
-    background-image: url(src/images/table.jpg);
+    background-image: url(src/images/table.webp);
     background-size: cover;
 }
 .showcase-container {
@@ -486,7 +486,7 @@ html {
     margin-top: 0;
 }
 .contact {
-    background-image: url(src/images/wall.jpg);
+    background-image: url(src/images/wall.webp);
     display: flex;
     align-items: center;
     justify-content: center;

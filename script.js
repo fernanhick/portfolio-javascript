@@ -2,7 +2,7 @@ window.onscroll = function () {
     scrollFunction()
     getSelection()
 }
-
+// Navbar links highlight when in section
 const sections = document.querySelectorAll('section[id]')
 function getSelection() {
     let scrollY = window.scrollY
@@ -23,6 +23,7 @@ function getSelection() {
         }
     })
 }
+
 function scrollFunction() {
     let nav = document.getElementById('navbar')
     if (
@@ -44,7 +45,7 @@ function toggleMenu() {
 }
 
 //Toggle navbar when clicking any menu button
-linksList = document.querySelectorAll('.link-item')
+const linksList = document.querySelectorAll('.link-item')
 for (i = 0; i < linksList.length; i++) {
     linksList[i].addEventListener('click', function () {
         nav.classList.remove('nav_toggle')
